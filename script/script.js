@@ -378,7 +378,11 @@ console.log(boolToWord(true));
 // "This is an example!" ==> "sihT si na !elpmaxe"
 // "double  spaces"      ==> "elbuod  secaps"
 
+<<<<<<< HEAD
 const str = 'double  spaces';
+=======
+// const str = 'double  spaces';
+>>>>>>> 186661248a60f61ad06c7bd65cf490d991eac8ee
 
 // const reverse = [...str].reverse().join('');
 // console.log(reverse);
@@ -403,6 +407,7 @@ function reverseWords(str) {
 
 console.log(reverseWords('This is an example!'));
 
+<<<<<<< HEAD
 // Usually when you buy something, you're asked whether your credit card number, phone number or answer to your most secret question is still correct. However, since someone could look over your shoulder, you don't want that shown on your screen. Instead, we mask it.
 // Your task is to write a function maskify, which changes all but the last four characters into '#'.
 // maskify("4556364607935616") == "############5616"
@@ -440,3 +445,16 @@ const maskify = (cardStr) => {
 console.log(maskify(cardStr));
 // const replacementArr = cardArr.splice(0, cardArr.length, '#')
 // console.log(replacementArr);
+=======
+
+// let newArr = [];
+// nstr.forEach(item => {
+//    newArr.push([item])
+// })
+// let NewArrRevers = [];
+// newArr.forEach(item => {
+//    NewArrRevers.push(item.reverse()) ;
+// })
+// console.log(NewArrRevers)
+// nstr.forEach
+>>>>>>> 186661248a60f61ad06c7bd65cf490d991eac8ee
