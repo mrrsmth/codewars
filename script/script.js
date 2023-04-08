@@ -378,4 +378,39 @@ console.log(boolToWord(true));
 // "This is an example!" ==> "sihT si na !elpmaxe"
 // "double  spaces"      ==> "elbuod  secaps"
 
-let startStr = 'double  spaces';
+// const str = 'double  spaces';
+
+// const reverse = [...str].reverse().join('');
+// console.log(reverse);
+
+// let startStr = 'double  spaces';
+// const newArrStr = [];
+// let nstr = startStr.split(' ')
+// // console.log(nstr)
+// nstr.forEach(item => {
+//    newArrStr.push(item.split('').reverse().join(''))
+// })
+// console.log(newArrStr.join(' '));
+
+function reverseWords(str) {
+   const newArrStr = [];
+   let newStr = str.split(' ')
+   newStr.forEach(item => {
+      newArrStr.push(item.split('').reverse().join(''))
+   })
+   return newArrStr.join(' ');
+}
+
+console.log(reverseWords('This is an example!'));
+
+
+// let newArr = [];
+// nstr.forEach(item => {
+//    newArr.push([item])
+// })
+// let NewArrRevers = [];
+// newArr.forEach(item => {
+//    NewArrRevers.push(item.reverse()) ;
+// })
+// console.log(NewArrRevers)
+// nstr.forEach
