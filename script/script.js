@@ -378,4 +378,65 @@ console.log(boolToWord(true));
 // "This is an example!" ==> "sihT si na !elpmaxe"
 // "double  spaces"      ==> "elbuod  secaps"
 
-let startStr = 'double  spaces';
+const str = 'double  spaces';
+
+// const reverse = [...str].reverse().join('');
+// console.log(reverse);
+
+// let startStr = 'double  spaces';
+// const newArrStr = [];
+// let nstr = startStr.split(' ')
+// // console.log(nstr)
+// nstr.forEach(item => {
+//    newArrStr.push(item.split('').reverse().join(''))
+// })
+// console.log(newArrStr.join(' '));
+
+function reverseWords(str) {
+   const newArrStr = [];
+   let newStr = str.split(' ')
+   newStr.forEach(item => {
+      newArrStr.push(item.split('').reverse().join(''))
+   })
+   return newArrStr.join(' ');
+}
+
+console.log(reverseWords('This is an example!'));
+
+// Usually when you buy something, you're asked whether your credit card number, phone number or answer to your most secret question is still correct. However, since someone could look over your shoulder, you don't want that shown on your screen. Instead, we mask it.
+// Your task is to write a function maskify, which changes all but the last four characters into '#'.
+// maskify("4556364607935616") == "############5616"
+
+// function maskify(cc) {
+
+// }
+
+// maskify("4556364607935616") == "############5616"
+// maskify(     "64607935616") ==      "#######5616"
+// maskify(               "1") ==                "1"
+// maskify(                "") ==                 ""
+
+
+const cardStr = '1';
+// const cardArr = cardStr.split('');
+// let l = cardArr.length - 4;
+// for (let i = 0; i < l; i++) {
+//    if (i > l) {
+//       cardArr.splice(i, 1, '#');
+//    }
+// }
+// console.log(cardArr.join(''));
+
+const maskify = (cardStr) => {
+   const cardArr = cardStr.split('');
+   let l = cardArr.length - 4;
+   for (let i = 0; i < l; i++) {
+      if (i < l) {
+         cardArr.splice(i, 1, '#');
+      }
+   }
+   return cardArr.join('');
+}
+console.log(maskify(cardStr));
+// const replacementArr = cardArr.splice(0, cardArr.length, '#')
+// console.log(replacementArr);

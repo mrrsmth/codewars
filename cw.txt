@@ -1,0 +1,12 @@
+7 kyu, 40, 7/04-7/05
+7/04: 
+1. Fix My Phone Numbers!
+2. Descending Order
+3. Shortest Word
+4. Beginner Series #3 Sum of Numbers
+5. Two to One
+6. Friend or Foe?
+7. Regex validate PIN code
+8/04:
+8. Reverse words
+9. Credit Card Mask
