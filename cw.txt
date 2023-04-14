@@ -28,6 +28,7 @@
 22. C.Wars
 23. Breaking chocolate problem
 24. Two Oldest Ages
+25. Two fighters, one winner.
 
 
 
