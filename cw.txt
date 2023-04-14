@@ -1,4 +1,4 @@
-7 kyu, 40, 7/04-7/05
+7 kyu, 40+, 7/04-7/05
 7/04: 
 1. Fix My Phone Numbers!
 2. Descending Order
@@ -10,3 +10,34 @@
 8/04:
 8. Reverse words
 9. Credit Card Mask
+12/04
+10. Sort array by string length
+11. Round up to the next multiple of 5
+13/04
+12. The highest profit wins!
+13. Find the stray number
+14. Testing 1-2-3
+15. Vowel Count
+16. Sort Numbers
+17. Anagram Detection
+14/04
+18. Remove anchor from URL
+19. Number of People in the Bus
+20. Make a function that does arithmetic!
+21. No oddities here
+22. C.Wars
+23. Breaking chocolate problem
+24. Two Oldest Ages
+
+
+
+
+
+
+
+
+
+
+
+
+
