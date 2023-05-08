@@ -1232,3 +1232,96 @@ console.log(twoOldestAges(ages));
 // let test = [];
 // test = [10, 70, 33, 36, 31, 84, 46, 31, 93, 49, 57, 6, 61, 93, 39, 63, 66].filter((i) => i == 93);
 // console.log(test);
+
+// Create a function that returns the name of the winner in a fight between two fighters.
+// Each fighter takes turns attacking the other and whoever kills the other first is victorious. Death is defined as having health <= 0.
+// Each fighter will be a Fighter object/instance. See the Fighter class below in your chosen language.
+// Both health and damagePerAttack (damage_per_attack for python) will be integers larger than 0. You can mutate the Fighter objects.
+// Your function also receives a third argument, a string, with the name of the fighter that attacks first.
+// Example:
+//   declare_winner(Fighter("Lew", 10, 2), Fighter("Harry", 5, 4), "Lew") => "Lew"
+//   Lew attacks Harry; Harry now has 3 health.
+//   Harry attacks Lew; Lew now has 6 health.
+//   Lew attacks Harry; Harry now has 1 health.
+//   Harry attacks Lew; Lew now has 2 health.
+//   Lew attacks Harry: Harry now has -1 health and is dead. Lew wins.
+
+// function Fighter(name, health, damagePerAttack) {
+//    this.name = name;
+//    this.health = health;
+//    this.damagePerAttack = damagePerAttack;
+//    this.toString = function() { return this.name; }
+// }
+
+class Fighter {
+   constructor(name, health, damagePerAttack) {
+      this.name = name;
+      this.health = health;
+      this.damagePerAttack = damagePerAttack;
+      this.toString = function () {
+         return this.name;
+      };
+   }
+}
+
+// const declareWinner = () => {
+
+// }
+
+function declareWinner(fighter1, fighter2, firstAttacker) {
+   let currentAttacker = firstAttacker;
+   let opponent = currentAttacker === fighter1.name ? fighter2 : fighter1;
+
+   while (fighter1.health > 0 && fighter2.health > 0) {
+      opponent.health -=
+         currentAttacker === fighter1.name ? fighter1.damagePerAttack : fighter2.damagePerAttack;
+      if (opponent.health <= 0) {
+         return currentAttacker;
+      }
+      currentAttacker = opponent.name;
+      opponent = currentAttacker === fighter1.name ? fighter2 : fighter1;
+   }
+}
+
+for (let i = 0; i < 100; i++) {
+   console.log(declareWinner(new Fighter('Lew', 10, 4), new Fighter('Harry', 10, 4)));
+}
+
+const x = 4;
+const y = 2;
+const myPromise = new Promise(function (resolve, reject) {
+   if (y === 0) {
+      reject('Переданы некорректные данные');
+   } else {
+      const z = x / y;
+      resolve(z);
+   }
+});
+console.log(myPromise);
+
+// Band name generator
+
+// My friend wants a new band name for her band. She like bands that use the formula: "The" + a noun with the first letter capitalized, for example:
+// "dolphin" -> "The Dolphin"
+// However, when a noun STARTS and ENDS with the same letter, she likes to repeat the noun twice and connect them together with the first and last letter, combined into one word (WITHOUT "The" in front), like this:
+// "alaska" -> "Alaskalaska"
+// Complete the function that takes a noun as a string, and returns her preferred band name written as a string.
+
+function bandNameGenerator(str) {
+   // Happy coding
+}
+
+let strBand = 'alaska';
+let newStrBand = strBand.split('');
+console.log(newStrBand);
+let firstLetter = newStrBand[0];
+let secondLetter = newStrBand[newStrBand.length - 1];
+console.log(firstLetter);
+console.log(secondLetter);
+// newStrBand.forEach((item) => {
+//   console.log(item);
+// if(firstLetter === secondLetter) {
+newStrBand;
+// }
+
+// })
