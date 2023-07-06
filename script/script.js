@@ -71,9 +71,9 @@
 // console.log(typeof(total));
 
 const usdcny = (usd) => {
-   const yuan = usd * 6.75;
-   yuan.toFixed(2);
-   return yuan.toString() + ' Chinese Yuan';
+  const yuan = usd * 6.75;
+  yuan.toFixed(2);
+  return yuan.toString() + ' Chinese Yuan';
 };
 console.log(usdcny(1));
 
@@ -96,8 +96,10 @@ const input = [4, 3, 1, 2, 5, 10, 6, 7, 9, 8];
 // }
 
 function sumEvenNumbers(input) {
-   const filteredSeq = input.filter((num) => Number.isInteger(num) && num % 2 === 0);
-   return filteredSeq.reduce((acc, curr) => acc + curr, 0);
+  const filteredSeq = input.filter(
+    (num) => Number.isInteger(num) && num % 2 === 0
+  );
+  return filteredSeq.reduce((acc, curr) => acc + curr, 0);
 }
 console.log(sumEvenNumbers(input));
 
@@ -114,7 +116,7 @@ console.log(sumEvenNumbers(input));
 // descendingOrder(123456789), 987654321
 
 function descendingOrder(n) {
-   //...
+  //...
 }
 
 // let number = 123456789;
@@ -138,12 +140,12 @@ console.log(numberArr);
 // console.log((y))
 
 const descendingOrder = (n) => {
-   const array = ('' + n).split('').map(Number);
-   array.sort((a, b) => {
-      return b - a;
-   });
-   const newNumber = array.join('');
-   return Number(newNumber);
+  const array = ('' + n).split('').map(Number);
+  array.sort((a, b) => {
+    return b - a;
+  });
+  const newNumber = array.join('');
+  return Number(newNumber);
 };
 
 console.log(descendingOrder(number));
@@ -151,12 +153,12 @@ console.log(descendingOrder(number));
 let s = "Let's travel abroad shall we";
 
 function findShort(s) {
-   s = s.split(' ');
-   const ssArr = [];
-   s.forEach((item) => {
-      ssArr.push(item.length);
-   });
-   return Math.min(...ssArr);
+  s = s.split(' ');
+  const ssArr = [];
+  s.forEach((item) => {
+    ssArr.push(item.length);
+  });
+  return Math.min(...ssArr);
 }
 console.log(findShort(s));
 
@@ -191,21 +193,21 @@ console.log(newS);
 // let max = 0;
 
 const getSum = (min, max) => {
-   if (min === max) {
-      return min;
-   } else if (min > max) {
-      return 0;
-   } else {
-      const sum = [];
-      for (let i = min; i <= max; i++) {
-         sum.push(i);
-      }
-      let sumNum = 0;
-      sum.forEach((num) => {
-         sumNum += num;
-      });
-      return sumNum;
-   }
+  if (min === max) {
+    return min;
+  } else if (min > max) {
+    return 0;
+  } else {
+    const sum = [];
+    for (let i = min; i <= max; i++) {
+      sum.push(i);
+    }
+    let sumNum = 0;
+    sum.forEach((num) => {
+      sumNum += num;
+    });
+    return sumNum;
+  }
 };
 
 // const getSum = (a, b) => {
@@ -239,11 +241,11 @@ const resultArrFinal = (arr) => [...new Set(arr)];
 console.log(resultArrFinal(resultArr).sort().join(''));
 
 const longest = (a, b) => {
-   const arrA = a.split('');
-   const arrB = b.split('');
-   let resultArr = [...arrA, ...arrB];
-   const resultArrFinal = (arr) => [...new Set(arr)];
-   return resultArrFinal(resultArr).sort().join('');
+  const arrA = a.split('');
+  const arrB = b.split('');
+  let resultArr = [...arrA, ...arrB];
+  const resultArrFinal = (arr) => [...new Set(arr)];
+  return resultArrFinal(resultArr).sort().join('');
 };
 
 // for (let i = 0; i < arrA.length; i++) {
@@ -267,13 +269,13 @@ const longest = (a, b) => {
 // friend ["Ryan", "Kieran", "Mark"] `shouldBe` ["Ryan", "Mark"]
 
 const friend = (arr) => {
-   const trueFriends = [];
-   arr.forEach((name) => {
-      if (name.length === 4) {
-         trueFriends.push(name);
-      }
-   });
-   return trueFriends;
+  const trueFriends = [];
+  arr.forEach((name) => {
+    if (name.length === 4) {
+      trueFriends.push(name);
+    }
+  });
+  return trueFriends;
 };
 
 console.log(friend(['Ryan', 'Kieran', 'Mark']));
@@ -284,24 +286,24 @@ console.log(friend(['Ryan', 'Kieran', 'Mark']));
 
 let str = 'hello';
 const getCount = (str) => {
-   let count = 0;
-   let newStr = str.split('');
-   newStr.forEach((item) => {
-      if (item === 'a') {
-         count++;
-      } else if (item === 'e') {
-         count++;
-      } else if (item === 'i') {
-         count++;
-      } else if (item === 'o') {
-         count++;
-      } else if (item === 'u') {
-         count++;
-      } else {
-         return (count += 0);
-      }
-   });
-   return count;
+  let count = 0;
+  let newStr = str.split('');
+  newStr.forEach((item) => {
+    if (item === 'a') {
+      count++;
+    } else if (item === 'e') {
+      count++;
+    } else if (item === 'i') {
+      count++;
+    } else if (item === 'o') {
+      count++;
+    } else if (item === 'u') {
+      count++;
+    } else {
+      return (count += 0);
+    }
+  });
+  return count;
 };
 console.log(getCount(str));
 
@@ -313,10 +315,16 @@ console.log(getCount(str));
 
 numbers = [23, 3, 19, 21, 16];
 const betweenExtremes = (numbers) => {
-   let value;
-   const maxNum = numbers.reduce((acc, number) => (number > acc ? number : acc), numbers[0]);
-   const minNum = numbers.reduce((acc, number) => (number < acc ? number : acc), numbers[0]);
-   return (value = maxNum - minNum);
+  let value;
+  const maxNum = numbers.reduce(
+    (acc, number) => (number > acc ? number : acc),
+    numbers[0]
+  );
+  const minNum = numbers.reduce(
+    (acc, number) => (number < acc ? number : acc),
+    numbers[0]
+  );
+  return (value = maxNum - minNum);
 };
 console.log(betweenExtremes(numbers));
 
@@ -325,11 +333,11 @@ console.log(betweenExtremes(numbers));
 // invert([1,2,3,4,5]) == [-1,-2,-3,-4,-5]
 const arrN = [1, 2, 3, 4, 5];
 const invert = (array) => {
-   const cloneArr = Object.assign([], array);
-   const newArr = cloneArr.map((item) => {
-      return item * -1;
-   });
-   return newArr;
+  const cloneArr = Object.assign([], array);
+  const newArr = cloneArr.map((item) => {
+    return item * -1;
+  });
+  return newArr;
 };
 console.log(invert(arrN));
 
@@ -337,8 +345,8 @@ console.log(invert(arrN));
 // assert.strictEqual(sumStr("4","5"), "9");
 
 const sumStr = (a, b) => {
-   resultStr = Number(a) + Number(b);
-   return String(resultStr);
+  resultStr = Number(a) + Number(b);
+  return String(resultStr);
 };
 
 console.log(sumStr('4', '5'));
@@ -410,22 +418,22 @@ console.log(arrStr);
 
 let phoneNumber = '0g * V O U z I N D9560187021';
 const isItANum = (str) => {
-   const arrNum = [];
-   const isNumeric = (n) => {
-      return !isNaN(parseFloat(n)) && isFinite(n);
-   };
-   const arrStr = str.split('');
-   arrStr.filter((item) => {
-      if (isNumeric(item) === true) {
-         arrNum.push(item);
-      }
-   });
-   const realNum = arrNum.join('');
-   if (realNum.length != 11 || realNum[0] != 0) {
-      return 'Not a phone number';
-   } else {
-      return realNum;
-   }
+  const arrNum = [];
+  const isNumeric = (n) => {
+    return !isNaN(parseFloat(n)) && isFinite(n);
+  };
+  const arrStr = str.split('');
+  arrStr.filter((item) => {
+    if (isNumeric(item) === true) {
+      arrNum.push(item);
+    }
+  });
+  const realNum = arrNum.join('');
+  if (realNum.length != 11 || realNum[0] != 0) {
+    return 'Not a phone number';
+  } else {
+    return realNum;
+  }
 };
 // let phoneNumber = '0g * V O U z I N D956018702';
 // const isItANum = str =>(str.replace(/\D/g,'').match(/^0\d{10}$/) || ['Not a phone number'])[0];
@@ -472,7 +480,7 @@ console.log(isItANum(phoneNumber));
 // All of the strings in the array passed to your function will be different lengths, so you will not have to decide how to order multiple strings of the same length.
 
 function sortByLength(array) {
-   // Return an array containing the same strings, ordered from shortest to longest
+  // Return an array containing the same strings, ordered from shortest to longest
 }
 
 // Test.assertDeepEquals(sortByLength(["Beg", "Life", "I", "To"]),["I", "To", "Beg", "Life"]);
@@ -605,11 +613,11 @@ const roundToNext5 = (n) => Math.ceil(n / 5) * 5;
 // console.log(roundToNext5(n));
 
 const minMax = (arr) => {
-   const output = [];
-   const min = Math.min(...arr);
-   const max = Math.max(...arr);
-   output.push(min, max);
-   return output;
+  const output = [];
+  const min = Math.min(...arr);
+  const max = Math.max(...arr);
+  output.push(min, max);
+  return output;
 };
 
 // / Story
@@ -660,23 +668,23 @@ console.log(max);
 
 const noOneArray = [17, 17, 3, 17, 17, 17, 17];
 const stray = (arr) => {
-   const result = {};
-   arr.forEach((item) => {
-      if (result[item] === undefined) {
-         result[item] = 1;
-      } else {
-         result[item] += 1;
+  const result = {};
+  arr.forEach((item) => {
+    if (result[item] === undefined) {
+      result[item] = 1;
+    } else {
+      result[item] += 1;
+    }
+  });
+  console.log(result);
+  for (const key in result) {
+    if (Object.hasOwnProperty.call(result, key)) {
+      const value = result[key];
+      if (value == 1) {
+        return +key;
       }
-   });
-   console.log(result);
-   for (const key in result) {
-      if (Object.hasOwnProperty.call(result, key)) {
-         const value = result[key];
-         if (value == 1) {
-            return +key;
-         }
-      }
-   }
+    }
+  }
 };
 console.log(stray(noOneArray));
 
@@ -706,11 +714,11 @@ console.log(stray(noOneArray));
 // ["a", "b", "c"] --> ["1: a", "2: b", "3: c"]
 
 const number = (array) => {
-   const newArr = [];
-   array.forEach((item, index) => {
-      newArr.push(index + 1 + ':' + ' ' + item);
-   });
-   return newArr;
+  const newArr = [];
+  array.forEach((item, index) => {
+    newArr.push(index + 1 + ':' + ' ' + item);
+  });
+  return newArr;
 };
 
 // Return the number (count) of vowels in the given string.
@@ -742,17 +750,17 @@ let strArr = strNotCount.split('');
 let count = 0;
 // console.log(strArr);
 strArr.forEach((item) => {
-   if (item === 'a') {
-      count++;
-   } else if (item === 'e') {
-      count++;
-   } else if (item === 'i') {
-      count++;
-   } else if (item === 'o') {
-      count++;
-   } else if (item === 'u') {
-      count++;
-   }
+  if (item === 'a') {
+    count++;
+  } else if (item === 'e') {
+    count++;
+  } else if (item === 'i') {
+    count++;
+  } else if (item === 'o') {
+    count++;
+  } else if (item === 'u') {
+    count++;
+  }
 });
 console.log(count);
 
@@ -762,14 +770,14 @@ console.log(count);
 // solution(null); // should return []
 
 const solution = (nums) => {
-   if (nums === null) {
-      return [];
-   } else {
-      nums.sort((a, b) => {
-         return a - b;
-      });
-   }
-   return nums;
+  if (nums === null) {
+    return [];
+  } else {
+    nums.sort((a, b) => {
+      return a - b;
+    });
+  }
+  return nums;
 };
 console.log(solution([1, 2, 3, 10, 5]));
 
@@ -798,10 +806,10 @@ console.log(solution([1, 2, 3, 10, 5]));
 // let str1 = 'Buckethead';
 // let str2 = 'DeathCubeK';
 const isAnagram = (str, originalStr) => {
-   let strArr = str.toLocaleLowerCase().split('').sort();
-   let originalStrArr = originalStr.toLocaleLowerCase().split('').sort();
-   const isEqual = JSON.stringify(strArr) === JSON.stringify(originalStrArr);
-   return isEqual;
+  let strArr = str.toLocaleLowerCase().split('').sort();
+  let originalStrArr = originalStr.toLocaleLowerCase().split('').sort();
+  const isEqual = JSON.stringify(strArr) === JSON.stringify(originalStrArr);
+  return isEqual;
 };
 // console.log(isAnagram(str1, str2));
 
@@ -815,8 +823,8 @@ let linArr = link.split('');
 console.log(linArr);
 
 function isWantedGuest(element, index, array) {
-   const guestName = '#';
-   return element === guestName;
+  const guestName = '#';
+  return element === guestName;
 }
 
 // const partyGuests = [
@@ -898,19 +906,19 @@ console.log(linArr.findIndex(isWantedGuest));
 // console.log(isNumericArray(q))
 
 function validatePIN(pin) {
-   if (/^\d+$/.test(pin)) {
-      if (pin.length === 4 || pin.length === 6) {
-         return true;
-      }
-   }
-   return false;
+  if (/^\d+$/.test(pin)) {
+    if (pin.length === 4 || pin.length === 6) {
+      return true;
+    }
+  }
+  return false;
 }
 
 const boolToWord = (bool) => {
-   if (bool === true) {
-      return 'Yes';
-   }
-   return 'No';
+  if (bool === true) {
+    return 'Yes';
+  }
+  return 'No';
 };
 console.log(boolToWord(true));
 
@@ -932,12 +940,12 @@ console.log(boolToWord(true));
 // console.log(newArrStr.join(' '));
 
 function reverseWords(str) {
-   const newArrStr = [];
-   let newStr = str.split(' ');
-   newStr.forEach((item) => {
-      newArrStr.push(item.split('').reverse().join(''));
-   });
-   return newArrStr.join(' ');
+  const newArrStr = [];
+  let newStr = str.split(' ');
+  newStr.forEach((item) => {
+    newArrStr.push(item.split('').reverse().join(''));
+  });
+  return newArrStr.join(' ');
 }
 
 console.log(reverseWords('This is an example!'));
@@ -966,14 +974,14 @@ const cardStr = '1';
 // console.log(cardArr.join(''));
 
 const maskify = (cardStr) => {
-   const cardArr = cardStr.split('');
-   let l = cardArr.length - 4;
-   for (let i = 0; i < l; i++) {
-      if (i < l) {
-         cardArr.splice(i, 1, '#');
-      }
-   }
-   return cardArr.join('');
+  const cardArr = cardStr.split('');
+  let l = cardArr.length - 4;
+  for (let i = 0; i < l; i++) {
+    if (i < l) {
+      cardArr.splice(i, 1, '#');
+    }
+  }
+  return cardArr.join('');
 };
 console.log(maskify(cardStr));
 // const replacementArr = cardArr.splice(0, cardArr.length, '#')
@@ -1029,25 +1037,25 @@ console.log(maskify(cardStr));
 // }
 
 const removeUrlAnchor = (url) => {
-   const urlArr = url.split('');
-   let index = 0;
-   const lastItemArr = urlArr[urlArr.length - 1];
-   const isWantedAnchor = (element) => {
-      const anchor = '#';
-      return element === anchor;
-   };
+  const urlArr = url.split('');
+  let index = 0;
+  const lastItemArr = urlArr[urlArr.length - 1];
+  const isWantedAnchor = (element) => {
+    const anchor = '#';
+    return element === anchor;
+  };
 
-   index = urlArr.findIndex(isWantedAnchor);
-   if (index === -1 && lastItemArr === '/') {
-      urlArr.splice(index);
-      return urlArr.join('') + '/';
-   } else if (index === -1) {
-      urlArr.splice(index);
-      return urlArr.join('') + lastItemArr;
-   } else {
-      urlArr.splice(index);
-      return urlArr.join('');
-   }
+  index = urlArr.findIndex(isWantedAnchor);
+  if (index === -1 && lastItemArr === '/') {
+    urlArr.splice(index);
+    return urlArr.join('') + '/';
+  } else if (index === -1) {
+    urlArr.splice(index);
+    return urlArr.join('') + lastItemArr;
+  } else {
+    urlArr.splice(index);
+    return urlArr.join('');
+  }
 };
 
 console.log(removeUrlAnchor('http://www.tomato.ne'));
@@ -1063,26 +1071,26 @@ console.log(removeUrlAnchor('http://www.tomato.ne'));
 // assert.strictEqual(number([[10,0],[3,5],[5,8]]),5);
 
 const busStops = [
-   [3, 0],
-   [9, 1],
-   [4, 10],
-   [12, 2],
-   [6, 1],
-   [7, 10],
+  [3, 0],
+  [9, 1],
+  [4, 10],
+  [12, 2],
+  [6, 1],
+  [7, 10],
 ];
 
 const numberBus = (busStops) => {
-   const stopArr = [];
-   busStops.forEach((item) => {
-      let info = item.reduce((a, b) => {
-         return a - b;
-      });
-      stopArr.push(info);
-   });
-   const finalBus = stopArr.reduce((a, b) => {
-      return a + b;
-   });
-   return finalBus;
+  const stopArr = [];
+  busStops.forEach((item) => {
+    let info = item.reduce((a, b) => {
+      return a - b;
+    });
+    stopArr.push(info);
+  });
+  const finalBus = stopArr.reduce((a, b) => {
+    return a + b;
+  });
+  return finalBus;
 };
 
 console.log(numberBus(busStops));
@@ -1101,15 +1109,15 @@ console.log(numberBus(busStops));
 //  console.log(finalBus)
 
 const arithmetic = (a, b, operator) => {
-   if (operator === 'add') {
-      return a + b;
-   } else if (operator === 'subtract') {
-      return a - b;
-   } else if (operator === 'multiply') {
-      return a * b;
-   } else if (operator === 'divide') {
-      return a / b;
-   }
+  if (operator === 'add') {
+    return a + b;
+  } else if (operator === 'subtract') {
+    return a - b;
+  } else if (operator === 'multiply') {
+    return a * b;
+  } else if (operator === 'divide') {
+    return a / b;
+  }
 };
 
 // assert.strictEqual(arithmetic(1, 2, "add"), 3, "'add' should return the two numbers added together!");
@@ -1127,20 +1135,20 @@ let mainArr = [0, 1, 2, 3];
 const oddArr = [];
 
 mainArr.forEach((item) => {
-   if (item % 2 === 0) {
-      oddArr.push(item);
-   }
+  if (item % 2 === 0) {
+    oddArr.push(item);
+  }
 });
 console.log(oddArr);
 
 const noOdds = (values) => {
-   const oddArr = [];
-   values.forEach((item) => {
-      if (item % 2 === 0) {
-         oddArr.push(item);
-      }
-   });
-   return oddArr;
+  const oddArr = [];
+  values.forEach((item) => {
+    if (item % 2 === 0) {
+      oddArr.push(item);
+    }
+  });
+  return oddArr;
 };
 
 // Normally we have firstname, middle and the last name but there may be more than one word in a name like a South Indian one.
@@ -1165,17 +1173,17 @@ const noOdds = (values) => {
 // console.log(firstLettersStr + '.' + surnameBigStr);
 
 const initials = (strNotInitials) => {
-   const arrName = strNotInitials.split(' ');
-   let surnameStr = arrName.pop();
-   let surnameBigStr = surnameStr[0].toUpperCase() + surnameStr.slice(1);
+  const arrName = strNotInitials.split(' ');
+  let surnameStr = arrName.pop();
+  let surnameBigStr = surnameStr[0].toUpperCase() + surnameStr.slice(1);
 
-   let firstLettersArr = [];
-   arrName.forEach((item) => {
-      item.toUpperCase();
-      firstLettersArr.push(item[0]);
-   });
-   let firstLettersStr = firstLettersArr.join('.').toUpperCase();
-   return firstLettersStr + '.' + surnameBigStr;
+  let firstLettersArr = [];
+  arrName.forEach((item) => {
+    item.toUpperCase();
+    firstLettersArr.push(item[0]);
+  });
+  let firstLettersStr = firstLettersArr.join('.').toUpperCase();
+  return firstLettersStr + '.' + surnameBigStr;
 };
 
 // Two Oldest Ages
@@ -1206,26 +1214,28 @@ const initials = (strNotInitials) => {
 
 // twoOldestAges([63,71,30,47,38,97,92,97,83,49,32,70,67,69,24,53,79,42,21,90,97,58,67,8,85,85]) should equal [97,97]: expected [ 97, 97, 97 ] to deeply equal [ 97, 97 ]
 
-const ages = [10, 70, 33, 36, 31, 84, 46, 31, 93, 49, 57, 6, 61, 93, 39, 63, 66];
+const ages = [
+  10, 70, 33, 36, 31, 84, 46, 31, 93, 49, 57, 6, 61, 93, 39, 63, 66,
+];
 const twoOldestAges = (ages) => {
-   let secondNumArr = [];
-   const finalNumArr = [];
-   const firstNum = Math.max(...ages);
-   testArr = ages.filter((item) => item === firstNum);
-   if (testArr.length > 1) {
-   }
-   ages.forEach((item) => {
-      if (item !== firstNum) {
-         secondNumArr.push(item);
-      }
-   });
-   let secondNum = Math.max(...secondNumArr);
-   finalNumArr.push(firstNum, secondNum);
-   if (testArr.length > 1) {
-      return testArr.slice(-2);
-   } else {
-      return finalNumArr.reverse();
-   }
+  let secondNumArr = [];
+  const finalNumArr = [];
+  const firstNum = Math.max(...ages);
+  testArr = ages.filter((item) => item === firstNum);
+  if (testArr.length > 1) {
+  }
+  ages.forEach((item) => {
+    if (item !== firstNum) {
+      secondNumArr.push(item);
+    }
+  });
+  let secondNum = Math.max(...secondNumArr);
+  finalNumArr.push(firstNum, secondNum);
+  if (testArr.length > 1) {
+    return testArr.slice(-2);
+  } else {
+    return finalNumArr.reverse();
+  }
 };
 console.log(twoOldestAges(ages));
 
@@ -1254,14 +1264,14 @@ console.log(twoOldestAges(ages));
 // }
 
 class Fighter {
-   constructor(name, health, damagePerAttack) {
-      this.name = name;
-      this.health = health;
-      this.damagePerAttack = damagePerAttack;
-      this.toString = function () {
-         return this.name;
-      };
-   }
+  constructor(name, health, damagePerAttack) {
+    this.name = name;
+    this.health = health;
+    this.damagePerAttack = damagePerAttack;
+    this.toString = function () {
+      return this.name;
+    };
+  }
 }
 
 // const declareWinner = () => {
@@ -1269,33 +1279,37 @@ class Fighter {
 // }
 
 function declareWinner(fighter1, fighter2, firstAttacker) {
-   let currentAttacker = firstAttacker;
-   let opponent = currentAttacker === fighter1.name ? fighter2 : fighter1;
+  let currentAttacker = firstAttacker;
+  let opponent = currentAttacker === fighter1.name ? fighter2 : fighter1;
 
-   while (fighter1.health > 0 && fighter2.health > 0) {
-      opponent.health -=
-         currentAttacker === fighter1.name ? fighter1.damagePerAttack : fighter2.damagePerAttack;
-      if (opponent.health <= 0) {
-         return currentAttacker;
-      }
-      currentAttacker = opponent.name;
-      opponent = currentAttacker === fighter1.name ? fighter2 : fighter1;
-   }
+  while (fighter1.health > 0 && fighter2.health > 0) {
+    opponent.health -=
+      currentAttacker === fighter1.name
+        ? fighter1.damagePerAttack
+        : fighter2.damagePerAttack;
+    if (opponent.health <= 0) {
+      return currentAttacker;
+    }
+    currentAttacker = opponent.name;
+    opponent = currentAttacker === fighter1.name ? fighter2 : fighter1;
+  }
 }
 
 for (let i = 0; i < 100; i++) {
-   console.log(declareWinner(new Fighter('Lew', 10, 4), new Fighter('Harry', 10, 4)));
+  console.log(
+    declareWinner(new Fighter('Lew', 10, 4), new Fighter('Harry', 10, 4))
+  );
 }
 
 const x = 4;
 const y = 2;
 const myPromise = new Promise(function (resolve, reject) {
-   if (y === 0) {
-      reject('Переданы некорректные данные');
-   } else {
-      const z = x / y;
-      resolve(z);
-   }
+  if (y === 0) {
+    reject('Переданы некорректные данные');
+  } else {
+    const z = x / y;
+    resolve(z);
+  }
 });
 console.log(myPromise);
 
@@ -1308,20 +1322,460 @@ console.log(myPromise);
 // Complete the function that takes a noun as a string, and returns her preferred band name written as a string.
 
 function bandNameGenerator(str) {
-   // Happy coding
+  // Happy coding
 }
 
 let strBand = 'alaska';
+let t = '';
 let newStrBand = strBand.split('');
 console.log(newStrBand);
 let firstLetter = newStrBand[0];
 let secondLetter = newStrBand[newStrBand.length - 1];
+if (firstLetter === secondLetter) {
+  t = strBand;
+}
+
 console.log(firstLetter);
 console.log(secondLetter);
 // newStrBand.forEach((item) => {
 //   console.log(item);
 // if(firstLetter === secondLetter) {
-newStrBand;
 // }
 
 // })
+
+describe('Smaple Tests', () => {
+  it('Should pass sample tests', () => {
+    assert.strictEqual(height(7), '3331148.800');
+    assert.strictEqual(height(0), '2000000.000');
+  });
+});
+
+const catHeigth = (n) => {
+  let baseHeigth = 2000000;
+  let sum = 0;
+  for (let i = 0; i < n; i++) {
+    sum += baseHeigth;
+    baseHeigth = baseHeigth / 2.5;
+  }
+  return sum;
+};
+console.log(catHeigth(3));
+
+function counter() {
+  let count = 0;
+  function increase() {
+    count++;
+    console.log(count);
+  }
+  return increase;
+}
+const up = counter();
+up();
+up();
+up();
+up();
+
+const obj = {
+  name: 'Vadim',
+  old: 30,
+};
+let test = obj;
+
+obj.name = 'Sasha';
+console.log(test);
+
+// Rick wants a faster way to get the product of the largest pair in an array. Your task is to create a performant solution to find the product of the largest two integers in a unique array of positive numbers.
+// All inputs will be valid.
+// Passing [2, 6, 3] should return 18, the product of [6, 3].
+
+// Disclaimer: only accepts solutions that are faster than his, which has a running time O(nlogn).
+
+describe('Max Product', function () {
+  it('should return the max product of a pair in given array', function () {
+    Test.assertEquals(maxProduct([56, 335, 195, 443, 6, 494, 252]), 218842);
+    Test.assertEquals(maxProduct([154, 428, 455, 346]), 194740);
+    Test.assertEquals(
+      maxProduct([
+        39, 135, 47, 275, 37, 108, 265, 457, 2, 133, 316, 330, 153, 253, 321,
+        411,
+      ]),
+      187827
+    );
+    Test.assertEquals(maxProduct([136, 376, 10, 146, 105, 63, 234]), 87984);
+    Test.assertEquals(
+      maxProduct([
+        354, 463, 165, 62, 472, 53, 347, 293, 252, 378, 420, 398, 255, 89,
+      ]),
+      218536
+    );
+    Test.assertEquals(
+      maxProduct([346, 446, 26, 425, 432, 349, 123, 269, 285, 93, 75, 14]),
+      192672
+    );
+    Test.assertEquals(maxProduct([134, 320, 266, 299]), 95680);
+    Test.assertEquals(
+      maxProduct([
+        114, 424, 53, 272, 128, 215, 25, 329, 272, 313, 100, 24, 252,
+      ]),
+      139496
+    );
+    Test.assertEquals(maxProduct([375, 56, 337, 466, 203]), 174750);
+  });
+});
+
+const maxProduct = (a) => {
+  const arrSecondNum = [];
+  const maxFirst = Math.max(...a);
+  a.forEach((item) => {
+    if (item !== maxFirst) {
+      arrSecondNum.push(item);
+    }
+  });
+  const maxSecond = Math.max(...arrSecondNum);
+  return maxFirst * maxSecond;
+};
+
+const arrFirstNum = [56, 335, 195, 443, 6, 494, 252];
+const arrSecondNum = [];
+const maxFirst = Math.max(...arrFirstNum);
+// console.log(maxFirst);
+arrFirstNum.forEach((item) => {
+  if (item !== maxFirst) {
+    arrSecondNum.push(item);
+  }
+});
+// console.log(arrSecondNum);
+const maxSecond = Math.max(...arrSecondNum);
+// console.log(maxSecond);
+console.log(maxFirst * maxSecond);
+
+// Учитывая строковые представления двух целых чисел, вернуть строковое представление суммы этих целых чисел.
+
+// Например:
+
+// sumStrings('1','2') // => '3'
+// Строковое представление целого числа не будет содержать никаких символов, кроме десяти цифр от «0» до «9».
+
+// Я удалил использование BigIntegerи BigDecimalв java
+
+// Python: ваше решение должно работать с огромными числами (около миллиона цифр), преобразование в int не сработает.
+
+// function sumStrings(a,b) {
+//    let result;
+//    if(a  === '') {
+//      return result = b + '';
+//    } else if(b === '') {
+//       return result = a + '';
+//    }
+//    result = parseInt(a) + parseInt(b);
+//    return result + '';
+//  }
+
+//  console.log(sumStrings('712569312664357328695151392', '8100824045303269669937'))
+let aStr = '712569312664357328695151392';
+let bStr = '8100824045303269669937';
+let sum;
+let newA = [];
+newA.push(aStr.split('').flat());
+console.log(newA);
+
+let arrStr11 = ['1', '2', '3'];
+let arrNum = arrStr11.map((num) => parseInt(num));
+console.log(arrNum); // [1, 2, 3]
+
+let kek = document.querySelector('kek');
+
+// const startStr = 'the_stealth_warrior';
+// const newStr = startStr.split('');
+// const resultArr = [];
+
+// for(let i = 0; i < newStr.length; i++) {
+//   if(newStr[i] == '-' || newStr[i] == '_') {
+//     newStr[i + 1] = newStr[i + 1].toUpperCase();
+//   }
+// }
+
+// newStr.forEach(item => {
+//   if(item != '-' && item != '_') {
+//     resultArr.push(item);
+//   }
+// });
+// console.log(resultArr.join(''));
+
+const startStr = 'the-stealth-warrior';
+const toCamelCase = (str) => {
+  const strArr = str.split('');
+  const resultArr = [];
+
+  for (let i = 0; i < strArr.length; i++) {
+    if (strArr[i] == '-' || strArr[i] == '_') {
+      strArr[i + 1] = strArr[i + 1].toUpperCase();
+    }
+  }
+
+  strArr.forEach((item) => {
+    if (item != '-' && item != '_') {
+      resultArr.push(item);
+    }
+  });
+
+  return resultArr.join('');
+};
+
+console.log(toCamelCase(startStr));
+
+// A Narcissistic Number (or Armstrong Number) is a positive number which is the sum of its own digits, each raised to the power of the number of digits in a given base. In this Kata, we will restrict ourselves to decimal (base 10).
+
+// For example, take 153 (3 digits), which is narcissistic:
+
+//     1^3 + 5^3 + 3^3 = 1 + 125 + 27 = 153
+// and 1652 (4 digits), which isn't:
+
+//     1^4 + 6^4 + 5^4 + 2^4 = 1 + 1296 + 625 + 16 = 1938
+// The Challenge:
+
+// Your code must return true or false (not 'true' and 'false') depending upon whether the given number is a Narcissistic number in base 10.
+
+// This may be True and False in your language, e.g. PHP.
+
+// Error checking for text strings or other invalid inputs is not required, only valid positive non-zero integers will be passed into the function.
+
+const startNum = 152;
+// const degreeArr = [];
+// let sum = 0;
+// let newNum = String(startNum).split('').map(Number);
+// const degree = newNum.length;
+
+// newNum.forEach(item => {
+//   degreeArr.push(Math.pow(item, degree))
+// })
+
+// degreeArr.forEach(item => {
+//   sum = sum + item;
+// })
+
+// function narcissistic(value) {
+//   const degreeArr = [];
+//   let sum = 0;
+//   let newNum = String(value).split('').map(Number);
+//   const degree = newNum.length;
+
+//   newNum.forEach(item => {
+//     degreeArr.push(Math.pow(item, degree))
+//   });
+
+//   degreeArr.forEach(item => {
+//     sum = sum + item;
+//   });
+
+//   if(value === sum) {
+//     return true;
+//   }
+//     return false;
+// }
+
+// console.log(narcissistic(startNum));
+
+// Examples
+//     16  -->  1 + 6 = 7
+//    942  -->  9 + 4 + 2 = 15  -->  1 + 5 = 6
+// 132189  -->  1 + 3 + 2 + 1 + 8 + 9 = 24  -->  2 + 4 = 6
+// 493193  -->  4 + 9 + 3 + 1 + 9 + 3 = 29  -->  2 + 9 = 11  -->  1 + 1 = 2
+
+function digitalRoot(n) {
+  // ...
+}
+
+// const fullNum = 132189;
+// let sumNumber = 0;
+// let testArr = [];
+// let newNum = String(fullNum).split('').map(Number);
+// console.log(newNum);
+
+// if (newNum.length != 1) {
+//   newNum.forEach((item) => {
+//     sumNumber = sumNumber + item;
+//   });
+// }
+// if(sumNumber > 9) {
+//   newNum = String(sumNumber).split('').map(Number);
+//   newNum.forEach((item) => {
+//     sumNumber = sumNumber + item;
+//   });
+// }
+// console.log(newNum);
+
+// for(let i = 0;)
+
+let sumNumber = 132189;
+let nNum = [];
+while (sumNumber > 9) {
+  let nNum = String(sumNumber).split('').map(Number);
+  const initialValue = 0;
+  const sumWithInitial = nNum.reduce(
+    (accumulator, currentValue) => accumulator + currentValue,
+    initialValue
+  );
+  sumNumber = sumWithInitial;
+  console.log(sumNumber);
+}
+
+const digitalRoot = (n) => {
+  while (n > 9) {
+    let nArr = String(n).split('').map(Number);
+    const initialValue = 0;
+    const sumWithInitial = nArr.reduce(
+      (accumulator, currentValue) => accumulator + currentValue,
+      initialValue
+    );
+    n = sumWithInitial;
+  }
+  return n;
+};
+console.log(digitalRoot(132189));
+
+// Given an array of integers, find the one that appears an odd number of times.
+
+// There will always be only one integer that appears an odd number of times.
+
+// Examples
+// [7] should return 7, because it occurs 1 time (which is odd).
+// [0] should return 0, because it occurs 1 time (which is odd).
+// [1,1,2] should return 2, because it occurs 1 time (which is odd).
+// [0,1,0,1,0] should return 0, because it occurs 3 times (which is odd).
+// [1,2,2,3,3,3,4,3,3,3,2,2,1] should return 4, because it appears 1 time (which is odd).
+
+const assert = require('chai').assert;
+
+describe('Example tests', function () {
+  function doTest(a, n) {
+    assert.strictEqual(findOdd(a), n, `Incorrect answer for input=[${a}]`);
+  }
+
+  it('Example tests', () => {
+    doTest([7], 7);
+    doTest([0], 0);
+    doTest([1, 1, 2], 2);
+    doTest([0, 1, 0, 1, 0], 0);
+    doTest([1, 2, 2, 3, 3, 3, 4, 3, 3, 3, 2, 2, 1], 4);
+  });
+
+  it('Fixed tests', () => {
+    doTest([20, 1, -1, 2, -2, 3, 3, 5, 5, 1, 2, 4, 20, 4, -1, -2, 5], 5);
+    doTest([1, 1, 2, -2, 5, 2, 4, 4, -1, -2, 5], -1);
+    doTest([20, 1, 1, 2, 2, 3, 3, 5, 5, 4, 20, 4, 5], 5);
+    doTest([10], 10);
+    doTest([1, 1, 1, 1, 1, 1, 10, 1, 1, 1, 1], 10);
+    doTest([5, 4, 3, 2, 1, 5, 4, 3, 2, 10, 10], 1);
+  });
+});
+
+function findOdd(A) {
+  //happy coding!
+  return 0;
+}
+
+// Дан массив целых чисел, найдите то, которое встречается нечетное количество раз.
+
+// Всегда будет только одно целое число, которое встречается нечетное количество раз.
+
+// Примеры
+// [7]должен вернуть 7, потому что это происходит 1 раз (что нечетно).
+// [0]должен вернуть 0, потому что это происходит 1 раз (что нечетно).
+// [1,1,2]должен вернуть 2, потому что это происходит 1 раз (что нечетно).
+// [0,1,0,1,0]должен вернуть 0, потому что он встречается 3 раза (что нечетно).
+// [1,2,2,3,3,3,4,3,3,3,2,2,1]должен вернуть 4, потому что он появляется 1 раз (что нечетно).
+
+const randomNumArr = [20, 1, -1, 2, -2, 3, 3, 5, 5, 1, 2, 4, 20, 4, -1, -2, 5];
+const resArr = [];
+
+for (let i = 0; i < randomNumArr.length; i++) {
+  resArr.push(item);
+}
+
+// const numbers = [20,1,-1,2,-2,3,3,5,5,1,2,4,20,4,-1,-2,5]; // исходный массив
+
+const countItems = {}; // здесь будет храниться промежуточный результат
+
+// получаем объект в котором ключ - это элемент массива, а значение - сколько раз встречается элемент в списке
+// например так будет выглядеть этот объект после цикла:
+// {1: 1, 3: 2, 4: 2, 7: 1, 15: 1, 19: 2}
+// 1 встречается в тексте 1 раз, 2 встречается 2 раза, 4 встречается 2 раза и так далее
+for (const item of numbers) {
+  // если элемент уже был, то прибавляем 1, если нет - устанавливаем 1
+  countItems[item] = countItems[item] ? countItems[item] + 1 : 1;
+}
+// console.log(countItems);
+
+for (let key in countItems) {
+  // if(countItems.hasOwnProperty(key)){
+  //   console.log(`${key} : ${countItems[key]}`)
+  // }
+  if (countItems[key] % 2 != 0) {
+    console.log(key);
+  }
+}
+const numbers = [20, 1, -1, 2, -2, 3, 3, 5, 5, 1, 2, 4, 20, 4, -1, -2, 5];
+const findOdd = (A) => {
+  const countItems = {};
+  for (const item of A) {
+    countItems[item] = countItems[item] ? countItems[item] + 1 : 1;
+  }
+  console.log(countItems);
+  for (let key in countItems) {
+    if (countItems[key] % 2 != 0) {
+      return Number(key);
+    }
+  }
+};
+console.log(findOdd(numbers));
+
+const myObject = {
+  first: 'one',
+  second: 'two',
+};
+
+for (const [key, value] of Object.entries(myObject)) {
+  if (key != 'first') {
+    console.log(key + ': ' + value);
+  }
+}
+
+// You probably know the "like" system from Facebook and other pages. People can "like" blog posts, pictures or other items. We want to create the text that should be displayed next to such an item.
+
+// Implement the function which takes an array containing the names of people that like an item. It must return the display text as shown in the examples:
+
+// []                                -->  "no one likes this"
+// ["Peter"]                         -->  "Peter likes this"
+// ["Jacob", "Alex"]                 -->  "Jacob and Alex like this"
+// ["Max", "John", "Mark"]           -->  "Max, John and Mark like this"
+// ["Alex", "Jacob", "Mark", "Max"]  -->  "Alex, Jacob and 2 others like this"
+// Note: For 4 or more names, the number in "and 2 others" simply increases.
+
+const likes = (names) => {
+  const lengthtArr = names.length;
+
+  if (lengthtArr <= 0) {
+    return 'no one likes this';
+  } else if (lengthtArr == 1) {
+    return `${names[0]} likes this`;
+  } else if (lengthtArr == 2) {
+    return `${names[0]} and ${names[1]} like this`;
+  } else if (lengthtArr == 3) {
+    return `${names[0]}, ${names[1]} and ${names[2]} like this`;
+  } else if (lengthtArr >= 4) {
+    return `${names[0]}, ${names[1]} and ${lengthtArr - 2} others like this`;
+  }
+};
+
+console.log(likes(['Alex', 'Jacob', 'Mark', 'Max']));
+
+// You are given an array (which will have a length of at least 3, but could be very large) containing integers. The array is either entirely comprised of odd integers or entirely comprised of even integers except for a single integer N. Write a method that takes the array as an argument and returns this "outlier" N.
+
+// Examples
+// [2, 4, 0, 100, 4, 11, 2602, 36]
+// Should return: 11 (the only odd number)
+
+// [160, 3, 1719, 19, 11, 13, -21]
+// Should return: 160 (the only even number)
